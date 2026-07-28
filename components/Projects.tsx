@@ -10,7 +10,6 @@ export default function Projects() {
             <h2 className="text-4xl font-bold text-white leading-tight">
               Showcase of<br />my best works
             </h2>
-            <span className="text-5xl animate-pulse">&#x2728;</span>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -38,7 +37,7 @@ export default function Projects() {
               </div>
               <div className="p-6 border-t border-white/5 flex justify-between items-center text-xs text-white/40">
                 <div className="flex items-center space-x-2">
-                  <span>&#x1F495; {project.likes}</span>
+                  <span>&#9825; {project.likes}</span>
                 </div>
                 <a
                   className="hover:text-white transition-colors flex items-center font-bold uppercase tracking-widest text-[10px]"

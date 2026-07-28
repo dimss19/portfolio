@@ -38,17 +38,18 @@ export interface Education {
   institution: string;
   program: string;
   period: string;
+  image: string;
 }
 
 export interface Organization {
   name: string;
   role: string;
   period: string;
+  image: string;
 }
 
 export interface Certification {
   title: string;
-  icon: string;
   image: string;
 }
 
@@ -154,11 +155,13 @@ export const educations: Education[] = [
     institution: "Universitas Brawijaya",
     program: "D3 Teknologi Informasi",
     period: "2024 - Present",
+    image: "/assets/education/universitas-brawijaya.jpg",
   },
   {
     institution: "SMKN 6 Malang",
     program: "Teknik Komputer dan Jaringan",
     period: "2021 - 2024",
+    image: "/assets/education/smkn-6-malang.jpg",
   },
 ];
 
@@ -167,14 +170,15 @@ export const organizations: Organization[] = [
     name: "PROVOKS (Programmer Vokasi)",
     role: "IoT Division Mentor",
     period: "2025 - Present",
+    image: "/assets/organization/provoks.jpg",
   },
 ];
 
 export const certifications: Certification[] = [
-  { title: "Microsoft Office Desktop Application", icon: "\u{1F4BB}", image: "/assets/certifications/microsoft-office.jpg" },
-  { title: "Content Creator (BNSP)", icon: "\u{1F3AC}", image: "/assets/certifications/content-creator.jpg" },
-  { title: "Dasar Visualisasi Data (Dicoding)", icon: "\u{1F4CA}", image: "/assets/certifications/dasar-visualisasi-data.jpg" },
-  { title: "Dasar AI (Dicoding)", icon: "\u{1F916}", image: "/assets/certifications/dasar-ai.jpg" },
+  { title: "Microsoft Office Desktop Application", image: "/assets/certifications/microsoft-office.jpg" },
+  { title: "Content Creator (BNSP)", image: "/assets/certifications/content-creator.jpg" },
+  { title: "Dasar Visualisasi Data (Dicoding)", image: "/assets/certifications/dasar-visualisasi-data.jpg" },
+  { title: "Dasar AI (Dicoding)", image: "/assets/certifications/dasar-ai.jpg" },
 ];
 
 export const testimonials: Testimonial[] = [
