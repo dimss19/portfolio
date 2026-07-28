@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 
 const ASCII_CHARS = "01@#$%&*+=-.:~";
-const GRID_COLS = 60;
-const GRID_ROWS = 20;
+const GRID_COLS = 120;
+const GRID_ROWS = 25;
 
 function generateGrid() {
   return Array.from({ length: GRID_ROWS }, () =>
@@ -75,7 +75,7 @@ export default function HeroAscii() {
       onMouseMove={handleMouseMove}
       className="relative w-full h-full overflow-hidden bg-background flex items-center justify-center select-none"
     >
-      <pre className="text-[10px] sm:text-xs md:text-sm leading-tight text-white/20 font-mono whitespace-pre pointer-events-none">
+      <pre className="text-[7px] sm:text-[9px] md:text-[11px] leading-tight text-white/20 font-mono whitespace-pre pointer-events-none">
         {grid.map((row, ry) => (
           <div key={ry}>
             {row.map((charIdx, rx) => {
