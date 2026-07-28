@@ -12,13 +12,26 @@ function generateGrid() {
   );
 }
 
+function staticGrid() {
+  return Array.from({ length: GRID_ROWS }, () =>
+    Array.from({ length: GRID_COLS }, () => 0)
+  );
+}
+
 export default function HeroAscii() {
-  const [grid, setGrid] = useState(generateGrid);
+  const [grid, setGrid] = useState(staticGrid);
   const [mouse, setMouse] = useState({ x: 0.5, y: 0.5 });
+  const [mounted, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const frameRef = useRef<number>(0);
 
   useEffect(() => {
+    setGrid(generateGrid());
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     let lastTime = 0;
     const animate = (time: number) => {
       if (time - lastTime > 80) {
@@ -45,7 +58,7 @@ export default function HeroAscii() {
     };
     frameRef.current = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(frameRef.current);
-  }, [mouse]);
+  }, [mouse, mounted]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
