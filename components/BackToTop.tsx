@@ -2,14 +2,13 @@
 
 export default function BackToTop() {
   const scrollToTop = () => {
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+    document.body.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <button
-      className="fixed bottom-32 right-8 glass-card text-white p-4 rounded-2xl hover:scale-110 transition-all z-40 group"
+      className="fixed bottom-32 right-8 glass-card text-white p-4 rounded-2xl hover:scale-110 transition-all z-40 group cursor-pointer"
       onClick={scrollToTop}
       aria-label="Back to top"
     >
