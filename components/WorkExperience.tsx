@@ -3,19 +3,27 @@
 import { useState } from "react";
 import Image from "next/image";
 import { experiences } from "@/data/portfolio";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function WorkExperience() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
 
   return (
-    <section className="py-24 bg-background" id="experience">
+    <section className="py-24 bg-background" id="experience" ref={ref}>
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-16 text-white text-center">Work experience</h2>
+        <div className={`scroll-fade-up ${isVisible ? "visible" : ""}`}>
+          <h2 className="text-4xl font-bold mb-16 text-white text-center">Work experience</h2>
+        </div>
         <div className="space-y-6">
           {experiences.map((exp, i) => {
             const isOpen = openIndex === i;
             return (
-              <div key={i} className="glass-card rounded-3xl overflow-hidden">
+              <div
+                key={i}
+                className={`glass-card rounded-3xl overflow-hidden scroll-fade-up ${isVisible ? "visible" : ""}`}
+                style={{ transitionDelay: `${(i + 1) * 150}ms` }}
+              >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : i)}

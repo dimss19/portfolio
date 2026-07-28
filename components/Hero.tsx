@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { profile } from "@/data/portfolio";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Hero() {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
+
   return (
     <main className="pt-16 pb-32 bg-background" id="top">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-[2rem] overflow-hidden h-[480px] mb-[-120px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+        <div className={`relative rounded-[2rem] overflow-hidden h-[480px] mb-[-120px] scroll-fade-up ${isVisible ? "visible" : ""}`}>
           <Image
             src="/assets/hero-bg.jpg"
             alt="Hero background"
@@ -21,7 +24,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative z-30 max-w-5xl mx-auto glass-card rounded-[2rem] p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+        <div className={`relative z-30 max-w-5xl mx-auto glass-card rounded-[2rem] p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10 scroll-fade-up ${isVisible ? "visible" : ""} transition-delay-200`}>
           <div className="w-36 h-36 rounded-3xl overflow-hidden flex-shrink-0 bg-surface-container border border-white/20">
             <Image
               src={profile.photo}

@@ -1,19 +1,28 @@
 import Image from "next/image";
 import { skills } from "@/data/portfolio";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Skills() {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
+
   return (
-    <section className="py-24 bg-background border-t border-white/5" id="skills">
+    <section className="py-24 bg-background border-t border-white/5" id="skills" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
-          Skills &amp; Focus Areas
-        </h2>
-        <p className="text-white/50 max-w-2xl mx-auto mb-20 text-lg">
-          Core competencies built through coursework, internship, and personal projects.
-        </p>
+        <div className={`scroll-fade-up ${isVisible ? "visible" : ""}`}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+            Skills &amp; Focus Areas
+          </h2>
+          <p className="text-white/50 max-w-2xl mx-auto mb-20 text-lg">
+            Core competencies built through coursework, internship, and personal projects.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {skills.map((skill) => (
-            <div key={skill.category} className="p-8 glass-card rounded-[2rem] text-left">
+          {skills.map((skill, i) => (
+            <div
+              key={skill.category}
+              className={`p-8 glass-card rounded-[2rem] text-left scroll-fade-up ${isVisible ? "visible" : ""}`}
+              style={{ transitionDelay: `${(i + 1) * 150}ms` }}
+            >
               <div className="mb-8 h-56 rounded-2xl overflow-hidden">
                 <Image
                   src={skill.image}

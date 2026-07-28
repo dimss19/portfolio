@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { projects } from "@/data/portfolio";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Projects() {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
+
   return (
-    <section className="py-24 bg-background" id="projects">
+    <section className="py-24 bg-background" id="projects" ref={ref}>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-end justify-between mb-16">
+        <div className={`flex items-end justify-between mb-16 scroll-fade-up ${isVisible ? "visible" : ""}`}>
           <div className="flex items-center space-x-4">
             <h2 className="text-4xl font-bold text-white leading-tight">
               Showcase of<br />my best works
@@ -13,8 +16,12 @@ export default function Projects() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div key={project.title} className="glass-card rounded-[2.5rem] overflow-hidden flex flex-col group hover:border-white/20 transition-all duration-500">
+          {projects.map((project, i) => (
+            <div
+              key={project.title}
+              className={`glass-card rounded-[2.5rem] overflow-hidden flex flex-col group hover:border-white/20 transition-all duration-500 scroll-fade-up ${isVisible ? "visible" : ""}`}
+              style={{ transitionDelay: `${(i + 1) * 150}ms` }}
+            >
               <div className="w-full h-64 overflow-hidden">
                 <Image
                   src={project.image}
@@ -54,7 +61,7 @@ export default function Projects() {
             </div>
           ))}
         </div>
-        <div className="mt-16 text-center">
+        <div className={`mt-16 text-center scroll-fade-up ${isVisible ? "visible" : ""}`}>
           <a
             className="px-10 py-4 glass-card rounded-full text-sm font-bold text-white hover:bg-white/10 transition-all tracking-widest uppercase inline-block"
             href="https://github.com/dimss19"

@@ -1,14 +1,23 @@
 import Image from "next/image";
 import { organizations } from "@/data/portfolio";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Organization() {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
+
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background" ref={ref}>
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-16 text-white text-center">Organization</h2>
+        <div className={`scroll-fade-up ${isVisible ? "visible" : ""}`}>
+          <h2 className="text-4xl font-bold mb-16 text-white text-center">Organization</h2>
+        </div>
         <div className="space-y-6">
-          {organizations.map((org) => (
-            <div key={org.name} className="glass-card rounded-3xl p-8 hover:bg-white/5 transition-colors">
+          {organizations.map((org, i) => (
+            <div
+              key={org.name}
+              className={`glass-card rounded-3xl p-8 hover:bg-white/5 transition-colors scroll-fade-up ${isVisible ? "visible" : ""}`}
+              style={{ transitionDelay: `${(i + 1) * 150}ms` }}
+            >
               <div className="flex items-center space-x-6">
                 <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
                   <Image
