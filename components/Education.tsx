@@ -4,10 +4,10 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Education() {
   return (
-    <section className="py-24 bg-background" id="education">
+    <section className="py-24" style={{ backgroundColor: "var(--bg)" }} id="education">
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold mb-16 text-white text-center">Education</h2>
+          <h2 className="text-4xl font-bold mb-16 text-center" style={{ color: "var(--heading)" }}>Education</h2>
         </ScrollReveal>
         <div className="space-y-6">
           {educations.map((edu, i) => (

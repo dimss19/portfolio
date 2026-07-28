@@ -9,10 +9,10 @@ export default function WorkExperience() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-background" id="experience">
+    <section className="py-24" style={{ backgroundColor: "var(--bg)" }} id="experience">
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold mb-16 text-white text-center">Work experience</h2>
+          <h2 className="text-4xl font-bold mb-16 text-center" style={{ color: "var(--heading)" }}>Work experience</h2>
         </ScrollReveal>
         <div className="space-y-6">
           {experiences.map((exp, i) => {

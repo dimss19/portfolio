@@ -4,7 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Hero() {
   return (
-    <main className="pt-16 pb-32 bg-background relative overflow-hidden" id="top">
+    <main className="pt-16 pb-32 relative overflow-hidden" style={{ backgroundColor: "var(--bg)" }} id="top">
       <div className="glow-1 absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[120px] pointer-events-none" />
       <div className="glow-2 absolute top-20 right-1/4 w-80 h-80 rounded-full blur-[100px] pointer-events-none" />
       <div className="glow-3 absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 rounded-full blur-[100px] pointer-events-none" />

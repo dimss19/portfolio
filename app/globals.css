@@ -75,6 +75,9 @@ body {
   --bg: #131313;
   --text: #e2e2e2;
   --text-muted: rgba(255, 255, 255, 0.5);
+  --heading: #ffffff;
+  --heading-sub: rgba(255, 255, 255, 0.5);
+  --border-on-bg: rgba(255, 255, 255, 0.05);
   --card-bg: rgba(255, 255, 255, 0.04);
   --card-border: rgba(255, 255, 255, 0.08);
   --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -91,10 +94,13 @@ body {
 /* Light mode */
 .light {
   --bg: #e8e8e8;
-  --card-bg: rgba(255, 255, 255, 0.04);
+  --heading: #1a1a1a;
+  --heading-sub: rgba(0, 0, 0, 0.5);
+  --border-on-bg: rgba(0, 0, 0, 0.08);
+  --card-bg: rgba(30, 30, 30, 0.85);
   --card-border: rgba(255, 255, 255, 0.08);
   --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  --nav-bg: rgba(19, 19, 19, 0.75);
+  --nav-bg: rgba(19, 19, 19, 0.85);
   --nav-border: rgba(255, 255, 255, 0.12);
   --nav-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   --badge-border: rgba(255, 255, 255, 0.3);
@@ -161,7 +167,7 @@ body {
 .badge-monochrome {
   border: 1px solid var(--badge-border);
   background-color: var(--badge-bg);
-  color: var(--icon-color);
+  color: var(--text);
 }
 
 .scroll-fade-up {

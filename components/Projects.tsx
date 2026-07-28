@@ -4,12 +4,12 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Projects() {
   return (
-    <section className="py-24 bg-background" id="projects">
+    <section className="py-24" style={{ backgroundColor: "var(--bg)" }} id="projects">
       <div className="max-w-7xl mx-auto px-4">
         <ScrollReveal>
           <div className="flex items-end justify-between mb-16">
             <div className="flex items-center space-x-4">
-              <h2 className="text-4xl font-bold text-white leading-tight">
+              <h2 className="text-4xl font-bold leading-tight" style={{ color: "var(--heading)" }}>
                 Showcase of<br />my best works
               </h2>
             </div>

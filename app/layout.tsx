@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geist.variable} ${jetbrains.variable} antialiased`} suppressHydrationWarning>
-      <body className="bg-background text-on-background selection:bg-white selection:text-black">
+      <body className="selection:bg-white selection:text-black">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

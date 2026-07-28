@@ -4,10 +4,10 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Organization() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24" style={{ backgroundColor: "var(--bg)" }}>
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold mb-16 text-white text-center">Organization</h2>
+          <h2 className="text-4xl font-bold mb-16 text-center" style={{ color: "var(--heading)" }}>Organization</h2>
         </ScrollReveal>
         <div className="space-y-6">
           {organizations.map((org, i) => (

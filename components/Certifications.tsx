@@ -4,10 +4,10 @@ import ImageModal from "./ImageModal";
 
 export default function Certifications() {
   return (
-    <section className="py-24 bg-background" id="certifications">
+    <section className="py-24" style={{ backgroundColor: "var(--bg)" }} id="certifications">
       <div className="max-w-[90rem] mx-auto px-4">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold mb-16 text-white text-center">Certifications</h2>
+          <h2 className="text-4xl font-bold mb-16 text-center" style={{ color: "var(--heading)" }}>Certifications</h2>
         </ScrollReveal>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {certifications.map((cert, i) => (

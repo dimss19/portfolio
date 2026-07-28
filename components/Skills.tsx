@@ -4,15 +4,15 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Skills() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden" id="skills">
+    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: "var(--bg)" }} id="skills">
       <div className="glow-2 absolute top-1/2 left-0 w-72 h-72 rounded-full blur-[100px] pointer-events-none" />
       <div className="glow-3 absolute bottom-0 right-0 w-80 h-80 rounded-full blur-[100px] pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight" style={{ color: "var(--heading)" }}>
             Skills &amp; Focus Areas
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto mb-20 text-lg">
+          <p className="max-w-2xl mx-auto mb-20 text-lg" style={{ color: "var(--heading-sub)" }}>
             Core competencies built through coursework, internship, and personal projects.
           </p>
         </ScrollReveal>
