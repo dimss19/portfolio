@@ -33,9 +33,9 @@ export default function ContactCTA() {
                 </a>
               ))}
             </div>
-            <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-white/20 uppercase tracking-[0.3em] font-medium">
-              <p>&copy; 2026 Adimus Ricky Faisal Sahri. All rights reserved</p>
-            </div>
+          <div className="flex justify-center text-[10px] text-white/20 uppercase tracking-[0.3em] font-medium">
+            <p>&copy; 2026 Adimus Ricky Faisal Sahri. All rights reserved</p>
+          </div>
           </div>
         </ScrollReveal>
       </div>
