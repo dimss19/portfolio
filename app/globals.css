@@ -92,6 +92,9 @@ body {
   --card-tag-border: rgba(255, 255, 255, 0.1);
   --card-tag-bg: rgba(255, 255, 255, 0.05);
   --card-tag-text: rgba(255, 255, 255, 0.7);
+  --nav-icon: rgba(255, 255, 255, 0.6);
+  --nav-icon-hover: rgba(255, 255, 255, 1);
+  --nav-divider: rgba(255, 255, 255, 0.2);
   --glow-1: rgba(139, 92, 246, 0.2);
   --glow-2: rgba(59, 130, 246, 0.15);
   --glow-3: rgba(244, 63, 94, 0.1);
@@ -120,6 +123,9 @@ body {
   --card-tag-border: rgba(0, 0, 0, 0.08);
   --card-tag-bg: rgba(0, 0, 0, 0.03);
   --card-tag-text: rgba(0, 0, 0, 0.6);
+  --nav-icon: rgba(0, 0, 0, 0.5);
+  --nav-icon-hover: rgba(0, 0, 0, 0.9);
+  --nav-divider: rgba(0, 0, 0, 0.1);
   --glow-1: rgba(139, 92, 246, 0.15);
   --glow-2: rgba(59, 130, 246, 0.12);
   --glow-3: rgba(244, 63, 94, 0.08);

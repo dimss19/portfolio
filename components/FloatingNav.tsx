@@ -12,7 +12,8 @@ export default function FloatingNav() {
         {navLinks.map((link) => (
           <a
             key={link.href}
-            className="text-white/60 transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110"
+            className="transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110"
+            style={{ color: "var(--nav-icon)" }}
             href={link.href}
             title={link.title}
           >
@@ -39,12 +40,13 @@ export default function FloatingNav() {
           </a>
         ))}
 
-        <div className="w-px h-5 bg-white/20" />
+        <div className="w-px h-5" style={{ backgroundColor: "var(--nav-divider)" }} />
 
         <button
           type="button"
           onClick={toggle}
-          className="text-white/60 transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+          className="transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+          style={{ color: "var(--nav-icon)" }}
           title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
         >
           {theme === "dark" ? (
