@@ -73,7 +73,7 @@ export const profile: Profile = {
   location: "Malang, Jawa Timur, Indonesia",
   photo: "/assets/profile-photo.jpg",
   stats: [
-    { label: "Projects", value: "2+" },
+    { label: "Projects", value: "3" },
     { label: "Certifications", value: "3" },
     { label: "Internships", value: "1" },
     { label: "Focus", value: "2" },
@@ -111,20 +111,28 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    title: "SADAM ART",
-    description: "Furniture e-commerce website built as part of coursework, covering product catalog, cart, and order flow.",
-    image: "/assets/projects/sadam-art.jpg",
-    tags: ["Laravel", "MySQL"],
+    title: "Smart Posture Corrector",
+    description: "IoT-based body posture monitoring system with ESP32, MPU6050 sensors, and real-time 3D visualization dashboard. Monitors back angle and provides instant feedback via MQTT protocol.",
+    image: "/assets/projects/smart-posture.jpg",
+    tags: ["ESP32", "MQTT", "Laravel", "3D Visualization"],
     likes: 0,
-    url: "https://github.com/dimss19",
+    url: "https://github.com/dimss19/smart-posture-corrector",
   },
   {
-    title: "Smart Posture",
-    description: "IoT-based body posture monitoring system using MQTT to stream sensor data in real time.",
-    image: "/assets/projects/smart-posture.jpg",
-    tags: ["ESP32", "MQTT"],
+    title: "SCADA Retort Monitor",
+    description: "Industrial SCADA system for monitoring retort sterilization machines. Built with Laravel, Modbus integration for TN-series controllers, real-time telemetry, and port management.",
+    image: "/assets/projects/scada-retort.jpg",
+    tags: ["Laravel", "Modbus", "TypeScript", "IoT"],
     likes: 0,
-    url: "https://github.com/dimss19",
+    url: "https://github.com/dimss19/scada-retort",
+  },
+  {
+    title: "Retort Monitor (Indah Mesin)",
+    description: "Web-based monitoring for retort sterilization machines with real-time temperature/pressure gauges, Chart.js visualization, and RBAC authentication. Contributed to Laravel + React + Inertia.js stack.",
+    image: "/assets/projects/retort-monitor.jpg",
+    tags: ["Laravel", "React", "Inertia.js", "Chart.js"],
+    likes: 0,
+    url: "https://github.com/Kacong05/project-indah-mesin",
   },
 ];
 
