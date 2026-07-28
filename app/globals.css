@@ -83,6 +83,9 @@ body {
   --nav-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   --badge-border: rgba(255, 255, 255, 0.3);
   --badge-bg: rgba(255, 255, 255, 0.05);
+  --glow-1: rgba(139, 92, 246, 0.2);
+  --glow-2: rgba(59, 130, 246, 0.15);
+  --glow-3: rgba(244, 63, 94, 0.1);
 }
 
 /* Light mode */
@@ -96,6 +99,9 @@ body {
   --nav-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
   --badge-border: rgba(255, 255, 255, 0.4);
   --badge-bg: rgba(255, 255, 255, 0.15);
+  --glow-1: rgba(139, 92, 246, 0.25);
+  --glow-2: rgba(59, 130, 246, 0.2);
+  --glow-3: rgba(244, 63, 94, 0.15);
 }
 
 .glass-card {
@@ -111,11 +117,15 @@ body {
   backdrop-filter: blur(16px) saturate(1.1);
   -webkit-backdrop-filter: blur(16px) saturate(1.1);
   border: 1px solid var(--card-border);
-  box-shadow: var(--card-shadow), 0 0 60px -12px rgba(139, 92, 246, 0.15);
+  box-shadow: var(--card-shadow), 0 0 60px -12px var(--glow-1);
 }
 
+.glow-1 { background: var(--glow-1); }
+.glow-2 { background: var(--glow-2); }
+.glow-3 { background: var(--glow-3); }
+
 .light .glass-card-glow {
-  box-shadow: var(--card-shadow), 0 0 60px -12px rgba(139, 92, 246, 0.1);
+  box-shadow: var(--card-shadow), 0 0 60px -12px var(--glow-1);
 }
 
 .glass-nav {

@@ -5,8 +5,8 @@ import ScrollReveal from "./ScrollReveal";
 export default function Skills() {
   return (
     <section className="py-24 bg-background relative overflow-hidden" id="skills">
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-violet-600/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="glow-2 absolute top-1/2 left-0 w-72 h-72 rounded-full blur-[100px] pointer-events-none" />
+      <div className="glow-3 absolute bottom-0 right-0 w-80 h-80 rounded-full blur-[100px] pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">

@@ -5,9 +5,9 @@ import ScrollReveal from "./ScrollReveal";
 export default function Hero() {
   return (
     <main className="pt-16 pb-32 bg-background relative overflow-hidden" id="top">
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-600/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-20 right-1/4 w-80 h-80 bg-blue-600/15 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-rose-600/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="glow-1 absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[120px] pointer-events-none" />
+      <div className="glow-2 absolute top-20 right-1/4 w-80 h-80 rounded-full blur-[100px] pointer-events-none" />
+      <div className="glow-3 absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal>
