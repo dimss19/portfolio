@@ -4,8 +4,10 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Projects() {
   return (
-    <section className="py-24" style={{ backgroundColor: "var(--bg)" }} id="projects">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: "var(--bg)" }} id="projects">
+      <div className="glow-4 absolute top-1/3 right-0 w-80 h-80 rounded-full blur-[100px] pointer-events-none" />
+      <div className="glow-5 absolute bottom-1/4 left-0 w-72 h-72 rounded-full blur-[100px] pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <ScrollReveal>
           <div className="flex items-end justify-between mb-16">
             <div className="flex items-center space-x-4">

@@ -22,8 +22,10 @@ const socialIcons: Record<string, ReactElement> = {
 
 export default function ContactCTA() {
   return (
-    <section className="py-40 text-center border-t" style={{ backgroundColor: "var(--bg)", borderColor: "var(--border-on-bg)" }} id="contact">
-      <div className="max-w-4xl mx-auto px-4">
+    <section className="py-40 text-center border-t relative overflow-hidden" style={{ backgroundColor: "var(--bg)", borderColor: "var(--border-on-bg)" }} id="contact">
+      <div className="glow-1 absolute top-1/4 left-1/3 w-96 h-96 rounded-full blur-[120px] pointer-events-none" />
+      <div className="glow-3 absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[100px] pointer-events-none" />
+      <div className="max-w-4xl mx-auto px-4 relative z-10">
         <ScrollReveal>
           <p className="text-xl mb-4 font-medium" style={{ color: "var(--heading-sub)" }}>Have a project in mind?</p>
           <h2 className="text-6xl md:text-8xl font-bold mb-12 tracking-tighter" style={{ color: "var(--heading)" }}>

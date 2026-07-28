@@ -9,8 +9,9 @@ export default function WorkExperience() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24" style={{ backgroundColor: "var(--bg)" }} id="experience">
-      <div className="max-w-4xl mx-auto px-4">
+    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: "var(--bg)" }} id="experience">
+      <div className="glow-6 absolute top-1/2 left-1/4 w-72 h-72 rounded-full blur-[100px] pointer-events-none" />
+      <div className="max-w-4xl mx-auto px-4 relative z-10">
         <ScrollReveal>
           <h2 className="text-4xl font-bold mb-16 text-center" style={{ color: "var(--heading)" }}>Work experience</h2>
         </ScrollReveal>
