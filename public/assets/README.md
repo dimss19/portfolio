@@ -38,11 +38,6 @@ public/assets/
 │   ├── content-creator.jpg        ← Sertifikat: Content Creator (BNSP)
 │   ├── dasar-visualisasi-data.jpg ← Sertifikat: Dasar Visualisasi Data
 │   └── dasar-ai.jpg               ← Sertifikat: Dasar AI
-│
-└── testimonials/
-    ├── person-1.jpg               ← Avatar testimonial 1
-    ├── person-2.jpg               ← Avatar testimonial 2
-    └── person-3.jpg               ← Avatar testimonial 3
 ```
 
 ## Spesifikasi
@@ -57,7 +52,6 @@ public/assets/
 | Education | 200×200 px | 1:1 | JPG/PNG/WebP |
 | Organization | 200×200 px | 1:1 | JPG/PNG/WebP |
 | Certifications | 600×375 px | 16:10 | JPG/PNG/WebP |
-| Testimonials | 200×200 px | 1:1 | JPG/PNG/WebP |
 
 ## Tips
 

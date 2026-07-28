@@ -53,13 +53,6 @@ export interface Certification {
   image: string;
 }
 
-export interface Testimonial {
-  quote: string;
-  name: string;
-  title: string;
-  image: string;
-}
-
 export interface NavLink {
   href: string;
   title: string;
@@ -76,14 +69,14 @@ export const navLinks: NavLink[] = [
 export const profile: Profile = {
   name: "Adimus Ricky Faisal Sahri",
   title: "Web Developer & IoT Enthusiast",
-  description: "Mahasiswa Teknologi Informasi Universitas Brawijaya dengan fokus pada Web Development dan Internet of Things (IoT).",
+  description: "",
   location: "Malang, Jawa Timur, Indonesia",
   photo: "/assets/profile-photo.jpg",
   stats: [
     { label: "Projects", value: "2+" },
     { label: "Certifications", value: "3" },
     { label: "Internships", value: "1" },
-    { label: "Focus Areas", value: "2" },
+    { label: "Focus", value: "2" },
   ],
   social: [
     { platform: "LinkedIn", url: "https://www.linkedin.com/in/adimusricky" },
@@ -179,10 +172,4 @@ export const certifications: Certification[] = [
   { title: "Content Creator (BNSP)", image: "/assets/certifications/content-creator.jpg" },
   { title: "Dasar Visualisasi Data (Dicoding)", image: "/assets/certifications/dasar-visualisasi-data.jpg" },
   { title: "Dasar AI (Dicoding)", image: "/assets/certifications/dasar-ai.jpg" },
-];
-
-export const testimonials: Testimonial[] = [
-  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company", image: "/assets/testimonials/person-1.jpg" },
-  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company", image: "/assets/testimonials/person-2.jpg" },
-  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company", image: "/assets/testimonials/person-3.jpg" },
 ];
