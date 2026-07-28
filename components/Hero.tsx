@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { profile } from "@/data/portfolio";
 import ScrollReveal from "./ScrollReveal";
+import HeroAscii from "./HeroAscii";
 
 export default function Hero() {
   return (
@@ -8,14 +9,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="relative rounded-[2rem] overflow-hidden h-[480px] mb-[-120px]">
-            <Image
-              src="/assets/hero-bg.jpg"
-              alt="Hero background"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/50" />
+            <HeroAscii />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20">
               <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-center">
                 Build.<br className="md:hidden" />Connect.<br className="md:hidden" />Innovate.
