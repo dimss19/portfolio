@@ -1,29 +1,34 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-geist-sans",
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
+
 export const metadata: Metadata = {
-  title: "Adimus Ricky Faisal Sahri — Portfolio",
-  description: "AIoT Engineer & Full Stack Web Developer portfolio website",
+  title: "Adimus Ricky Faisal Sahri | Web Developer & IoT Enthusiast",
+  description: "Portfolio website showcasing web development and IoT projects",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="en"
-      className={`${plusJakartaSans.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-black text-white">{children}</body>
+    <html lang="en" className={`${geist.variable} ${jetbrains.variable} antialiased`}>
+      <body className="bg-background text-on-background selection:bg-white selection:text-black">
+        {children}
+      </body>
     </html>
   );
 }
