@@ -24,10 +24,11 @@ export default function WorkExperience() {
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="w-full p-8 flex justify-between items-center cursor-pointer hover:bg-white/5 transition-colors text-left"
+                    className="w-full p-8 flex justify-between items-center cursor-pointer transition-colors text-left"
+                    style={{ color: "var(--card-text)" }}
                   >
                     <div className="flex items-center space-x-6 pointer-events-none">
-                      <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white/5 border border-white/10 shrink-0">
+                      <div className="w-16 h-16 rounded-2xl overflow-hidden shrink-0" style={{ backgroundColor: "var(--card-tag-bg)", border: "1px solid var(--card-tag-border)" }}>
                         <Image
                           src={exp.image}
                           alt={exp.company}
@@ -37,14 +38,15 @@ export default function WorkExperience() {
                         />
                       </div>
                       <div>
-                        <h4 className="font-bold text-xl text-white">{exp.role}</h4>
-                        <p className="text-sm text-white/50">
+                        <h4 className="font-bold text-xl">{exp.role}</h4>
+                        <p className="text-sm" style={{ color: "var(--card-text-muted)" }}>
                           {exp.company} &bull; {exp.period} &bull; {exp.location}
                         </p>
                       </div>
                     </div>
                     <svg
-                      className={`w-5 h-5 text-white/70 shrink-0 transition-transform duration-200 pointer-events-none ${isOpen ? "rotate-180" : ""}`}
+                      className={`w-5 h-5 shrink-0 transition-transform duration-200 pointer-events-none ${isOpen ? "rotate-180" : ""}`}
+                      style={{ color: "var(--card-text-muted)" }}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -53,9 +55,9 @@ export default function WorkExperience() {
                     </svg>
                   </button>
                   {isOpen && (
-                    <div className="px-8 pb-10 text-sm text-white/60">
-                      <div className="border-t border-white/10 pt-8">
-                        <p className="font-bold mb-4 uppercase text-[10px] text-white/40 tracking-widest">
+                    <div className="px-8 pb-10 text-sm" style={{ color: "var(--card-text-muted)" }}>
+                      <div className="border-t pt-8" style={{ borderColor: "var(--card-tag-border)" }}>
+                        <p className="font-bold mb-4 uppercase text-[10px] tracking-widest" style={{ color: "var(--card-text-dim)" }}>
                           Key Impact &amp; Responsibilities:
                         </p>
                         <ul className="list-disc ml-4 space-y-3">

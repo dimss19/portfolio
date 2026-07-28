@@ -32,11 +32,11 @@ export default function Skills() {
                 <span className="px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest badge-monochrome">
                   {skill.category}
                 </span>
-                <h3 className="text-2xl font-bold mt-6 mb-3 text-white">{skill.title}</h3>
-                <p className="text-white/50 text-sm mb-8 leading-relaxed">{skill.description}</p>
+                <h3 className="text-2xl font-bold mt-6 mb-3" style={{ color: "var(--card-text)" }}>{skill.title}</h3>
+                <p className="text-sm mb-8 leading-relaxed" style={{ color: "var(--card-text-muted)" }}>{skill.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {skill.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1.5 border border-white/10 rounded-lg text-[10px] font-medium text-white/70 bg-white/5">
+                    <span key={tag} className="px-3 py-1.5 rounded-lg text-[10px] font-medium" style={{ border: "1px solid var(--card-tag-border)", backgroundColor: "var(--card-tag-bg)", color: "var(--card-tag-text)" }}>
                       {tag}
                     </span>
                   ))}

@@ -20,7 +20,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
             <ScrollReveal key={project.title} delay={(i + 1) * 150}>
-              <div className="glass-card rounded-[2.5rem] overflow-hidden flex flex-col group hover:border-white/20 transition-all duration-500 h-full">
+              <div className="glass-card rounded-[2.5rem] overflow-hidden flex flex-col group transition-all duration-500 h-full">
                 <div className="w-full h-64 overflow-hidden">
                   <Image
                     src={project.image}
@@ -31,22 +31,23 @@ export default function Projects() {
                   />
                 </div>
                 <div className="p-8 flex-grow">
-                  <h3 className="font-bold text-xl mb-3 text-white">{project.title}</h3>
-                  <p className="text-white/50 text-sm mb-6 leading-relaxed">{project.description}</p>
+                  <h3 className="font-bold text-xl mb-3" style={{ color: "var(--card-text)" }}>{project.title}</h3>
+                  <p className="text-sm mb-6 leading-relaxed" style={{ color: "var(--card-text-muted)" }}>{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="text-[10px] px-3 py-1 bg-white/5 border border-white/10 rounded-full font-bold text-white/60">
+                      <span key={tag} className="text-[10px] px-3 py-1 rounded-full font-bold" style={{ backgroundColor: "var(--card-tag-bg)", border: "1px solid var(--card-tag-border)", color: "var(--card-tag-text)" }}>
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="p-6 border-t border-white/5 flex justify-between items-center text-xs text-white/40">
+                <div className="p-6 border-t flex justify-between items-center text-xs" style={{ borderColor: "var(--card-tag-border)", color: "var(--card-text-dim)" }}>
                   <div className="flex items-center space-x-2">
                     <span>&#9825; {project.likes}</span>
                   </div>
                   <a
-                    className="hover:text-white transition-colors flex items-center font-bold uppercase tracking-widest text-[10px]"
+                    className="transition-colors flex items-center font-bold uppercase tracking-widest text-[10px]"
+                    style={{ color: "var(--card-text-muted)" }}
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -64,7 +65,8 @@ export default function Projects() {
         <ScrollReveal delay={300}>
           <div className="mt-16 text-center">
             <a
-              className="px-10 py-4 glass-card rounded-full text-sm font-bold text-white hover:bg-white/10 transition-all tracking-widest uppercase inline-block"
+              className="px-10 py-4 glass-card rounded-full text-sm font-bold transition-all tracking-widest uppercase inline-block"
+              style={{ color: "var(--card-text)" }}
               href="https://github.com/dimss19"
               target="_blank"
               rel="noopener noreferrer"

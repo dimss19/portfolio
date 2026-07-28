@@ -20,7 +20,7 @@ export default function Certifications() {
                   </div>
                 </div>
                 <div className="px-6 pb-6 pt-2">
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-white/70 leading-relaxed">
+                  <p className="text-[11px] font-bold uppercase tracking-widest leading-relaxed" style={{ color: "var(--card-text-muted)" }}>
                     {cert.title}
                   </p>
                 </div>

@@ -12,9 +12,9 @@ export default function Education() {
         <div className="space-y-6">
           {educations.map((edu, i) => (
             <ScrollReveal key={edu.institution} delay={(i + 1) * 150}>
-              <div className="glass-card rounded-3xl p-8 hover:bg-white/5 transition-colors">
+              <div className="glass-card rounded-3xl p-8 transition-colors">
                 <div className="flex items-center space-x-6">
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden shrink-0" style={{ backgroundColor: "var(--card-tag-bg)", border: "1px solid var(--card-tag-border)" }}>
                     <Image
                       src={edu.image}
                       alt={edu.institution}
@@ -24,8 +24,8 @@ export default function Education() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-white">{edu.institution}</h4>
-                    <p className="text-sm text-white/50">
+                    <h4 className="font-bold text-xl" style={{ color: "var(--card-text)" }}>{edu.institution}</h4>
+                    <p className="text-sm" style={{ color: "var(--card-text-muted)" }}>
                       {edu.program} &bull; {edu.period}
                     </p>
                   </div>

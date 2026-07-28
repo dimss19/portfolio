@@ -12,9 +12,9 @@ export default function Organization() {
         <div className="space-y-6">
           {organizations.map((org, i) => (
             <ScrollReveal key={org.name} delay={(i + 1) * 150}>
-              <div className="glass-card rounded-3xl p-8 hover:bg-white/5 transition-colors">
+              <div className="glass-card rounded-3xl p-8 transition-colors">
                 <div className="flex items-center space-x-6">
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden shrink-0" style={{ backgroundColor: "var(--card-tag-bg)", border: "1px solid var(--card-tag-border)" }}>
                     <Image
                       src={org.image}
                       alt={org.name}
@@ -24,8 +24,8 @@ export default function Organization() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-white">{org.name}</h4>
-                    <p className="text-sm text-white/50">
+                    <h4 className="font-bold text-xl" style={{ color: "var(--card-text)" }}>{org.name}</h4>
+                    <p className="text-sm" style={{ color: "var(--card-text-muted)" }}>
                       {org.role} &bull; {org.period}
                     </p>
                   </div>
