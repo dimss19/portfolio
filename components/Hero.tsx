@@ -19,7 +19,7 @@ export default function Hero() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--hero-overlay)]" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20">
               <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-center">
                 Build.<br className="md:hidden" />Connect.<br className="md:hidden" />Innovate.
