@@ -1,23 +1,31 @@
 import Image from "next/image";
 import { profile } from "@/data/portfolio";
 import ScrollReveal from "./ScrollReveal";
-import HeroAscii from "./HeroAscii";
 
 export default function Hero() {
   return (
-    <main className="bg-background" id="top">
-      <div className="relative">
-        <HeroAscii />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20 pointer-events-none">
-          <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-center">
-            Build.<br className="md:hidden" />Connect.<br className="md:hidden" />Innovate.
-          </h1>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-32 relative z-30">
+    <main className="pt-16 pb-32 bg-background" id="top">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <div className="glass-card rounded-[2rem] p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+          <div className="relative rounded-[2rem] overflow-hidden h-[480px] mb-[-120px]">
+            <Image
+              src="/assets/hero-bg.jpg"
+              alt="Hero background"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/50" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20">
+              <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-center">
+                Build.<br className="md:hidden" />Connect.<br className="md:hidden" />Innovate.
+              </h1>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={200}>
+          <div className="relative z-30 max-w-5xl mx-auto glass-card rounded-[2rem] p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
             <div className="w-36 h-36 rounded-3xl overflow-hidden flex-shrink-0 bg-surface-container border border-white/20">
               <Image
                 src={profile.photo}

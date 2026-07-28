@@ -5,7 +5,7 @@ import ImageModal from "./ImageModal";
 export default function Certifications() {
   return (
     <section className="py-24 bg-background" id="certifications">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[90rem] mx-auto px-4">
         <ScrollReveal>
           <h2 className="text-4xl font-bold mb-16 text-white text-center">Certifications</h2>
         </ScrollReveal>
