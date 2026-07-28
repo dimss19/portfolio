@@ -9,7 +9,7 @@ export default function Certifications() {
         <ScrollReveal>
           <h2 className="text-4xl font-bold mb-16 text-white text-center">Certifications</h2>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {certifications.map((cert, i) => (
             <ScrollReveal key={cert.title} delay={(i + 1) * 150}>
               <div className="glass-card rounded-[2rem] overflow-hidden h-full">

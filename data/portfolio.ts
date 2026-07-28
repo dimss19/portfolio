@@ -73,10 +73,10 @@ export const profile: Profile = {
   location: "Malang, Jawa Timur, Indonesia",
   photo: "/assets/profile-photo.jpg",
   stats: [
-    { label: "Projects", value: "3" },
-    { label: "Certifications", value: "3" },
+    { label: "Projects", value: "15" },
+    { label: "Certifications", value: "4" },
     { label: "Internships", value: "1" },
-    { label: "Focus", value: "2" },
+    { label: "Focus", value: "3" },
   ],
   social: [
     { platform: "LinkedIn", url: "https://www.linkedin.com/in/adimusricky" },

@@ -10,7 +10,7 @@ export default function Hero() {
         <ScrollReveal>
           <div className="relative rounded-[2rem] overflow-hidden h-[480px] mb-[-120px]">
             <HeroAscii />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20 pointer-events-none">
               <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-center">
                 Build.<br className="md:hidden" />Connect.<br className="md:hidden" />Innovate.
               </h1>
