@@ -7,7 +7,7 @@ export default function FloatingNav() {
         {navLinks.map((link) => (
           <a
             key={link.href}
-            className="text-white opacity-60 transition-all duration-500 hover:opacity-100 hover:scale-125 hover:animate-bounce"
+            className="text-white opacity-60 transition-all duration-500 hover:opacity-100 hover:-translate-y-1"
             href={link.href}
             title={link.title}
           >
