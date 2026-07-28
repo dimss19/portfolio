@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { testimonials } from "@/data/portfolio";
 
 export default function Testimonials() {
@@ -13,7 +14,15 @@ export default function Testimonials() {
                 {t.quote}
               </p>
               <div className="flex items-center space-x-4 mt-auto">
-                <div className="w-12 h-12 rounded-2xl img-placeholder text-[10px]">Image</div>
+                <div className="w-12 h-12 rounded-2xl overflow-hidden">
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
                   <p className="text-sm font-bold text-white">{t.name}</p>
                   <p className="text-[10px] text-white/40 uppercase tracking-widest">{t.title}</p>

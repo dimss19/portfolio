@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "@/data/portfolio";
 
 export default function Projects() {
@@ -15,7 +16,15 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div key={project.title} className="glass-card rounded-[2.5rem] overflow-hidden flex flex-col group hover:border-white/20 transition-all duration-500">
-              <div className="w-full h-64 img-placeholder border-0 rounded-0">Image</div>
+              <div className="w-full h-64 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={800}
+                  height={500}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
               <div className="p-8 flex-grow">
                 <h3 className="font-bold text-xl mb-3 text-white">{project.title}</h3>
                 <p className="text-white/50 text-sm mb-6 leading-relaxed">{project.description}</p>

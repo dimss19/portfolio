@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { certifications } from "@/data/portfolio";
 
 export default function Certifications() {
@@ -8,7 +9,15 @@ export default function Certifications() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {certifications.map((cert) => (
             <div key={cert.title} className="glass-card rounded-[2rem] overflow-hidden">
-              <div className="w-full aspect-[16/10] img-placeholder border-0 rounded-0">Image</div>
+              <div className="w-full aspect-[16/10] overflow-hidden">
+                <Image
+                  src={cert.image}
+                  alt={cert.title}
+                  width={600}
+                  height={375}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="p-6 flex items-center space-x-4 border-t border-white/10">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white">
                   {cert.icon}

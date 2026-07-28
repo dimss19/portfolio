@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { experiences } from "@/data/portfolio";
 
 export default function WorkExperience() {
@@ -22,8 +23,14 @@ export default function WorkExperience() {
                 onClick={() => toggle(i)}
               >
                 <div className="flex items-center space-x-6">
-                  <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl img-placeholder text-[10px]">
-                    Image
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
+                    <Image
+                      src={exp.image}
+                      alt={exp.company}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h4 className="font-bold text-xl text-white">{exp.role}</h4>

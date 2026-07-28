@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { skills } from "@/data/portfolio";
 
 export default function Skills() {
@@ -13,7 +14,15 @@ export default function Skills() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skills.map((skill) => (
             <div key={skill.category} className="p-8 glass-card rounded-[2rem] text-left">
-              <div className="mb-8 h-56 rounded-2xl img-placeholder">Image</div>
+              <div className="mb-8 h-56 rounded-2xl overflow-hidden">
+                <Image
+                  src={skill.image}
+                  alt={skill.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <span className="px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest badge-monochrome">
                 {skill.category}
               </span>

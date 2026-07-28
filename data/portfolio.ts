@@ -3,6 +3,7 @@ export interface Profile {
   title: string;
   description: string;
   location: string;
+  photo: string;
   stats: { label: string; value: string }[];
   social: { platform: string; url: string }[];
 }
@@ -11,12 +12,14 @@ export interface Skill {
   category: string;
   title: string;
   description: string;
+  image: string;
   tags: string[];
 }
 
 export interface Project {
   title: string;
   description: string;
+  image: string;
   tags: string[];
   likes: number;
   url: string;
@@ -25,6 +28,7 @@ export interface Project {
 export interface Experience {
   role: string;
   company: string;
+  image: string;
   period: string;
   location: string;
   responsibilities: string[];
@@ -45,12 +49,14 @@ export interface Organization {
 export interface Certification {
   title: string;
   icon: string;
+  image: string;
 }
 
 export interface Testimonial {
   quote: string;
   name: string;
   title: string;
+  image: string;
 }
 
 export interface NavLink {
@@ -71,6 +77,7 @@ export const profile: Profile = {
   title: "Web Developer & IoT Enthusiast",
   description: "Mahasiswa Teknologi Informasi Universitas Brawijaya dengan fokus pada Web Development dan Internet of Things (IoT).",
   location: "Malang, Jawa Timur, Indonesia",
+  photo: "/assets/profile-photo.jpg",
   stats: [
     { label: "Projects", value: "2+" },
     { label: "Certifications", value: "3" },
@@ -89,18 +96,21 @@ export const skills: Skill[] = [
     category: "Web Development",
     title: "Junior Web Developer",
     description: "Building web applications with modern stacks, from database design to responsive UI.",
+    image: "/assets/skills/web-development.jpg",
     tags: ["Laravel", "React", "PHP", "MySQL"],
   },
   {
     category: "IoT",
     title: "IoT Development",
     description: "Designing connected devices and monitoring systems using microcontrollers and sensors.",
+    image: "/assets/skills/iot.jpg",
     tags: ["ESP32", "MQTT", "Sensor Integration"],
   },
   {
     category: "Infrastructure",
     title: "Network & Systems",
     description: "Configuring and troubleshooting networks, servers, and hardware from a TKJ background.",
+    image: "/assets/skills/network.jpg",
     tags: ["Mikrotik", "LAN/WAN", "Cloud Basics"],
   },
 ];
@@ -109,6 +119,7 @@ export const projects: Project[] = [
   {
     title: "SADAM ART",
     description: "Furniture e-commerce website built as part of coursework, covering product catalog, cart, and order flow.",
+    image: "/assets/projects/sadam-art.jpg",
     tags: ["Laravel", "MySQL"],
     likes: 0,
     url: "https://github.com/dimss19",
@@ -116,6 +127,7 @@ export const projects: Project[] = [
   {
     title: "Smart Posture",
     description: "IoT-based body posture monitoring system using MQTT to stream sensor data in real time.",
+    image: "/assets/projects/smart-posture.jpg",
     tags: ["ESP32", "MQTT"],
     likes: 0,
     url: "https://github.com/dimss19",
@@ -126,6 +138,7 @@ export const experiences: Experience[] = [
   {
     role: "Internship Technician",
     company: "Serbu Computer",
+    image: "/assets/experience/serbu-computer.jpg",
     period: "Jan 2023 - Jun 2023",
     location: "Malang",
     responsibilities: [
@@ -158,14 +171,14 @@ export const organizations: Organization[] = [
 ];
 
 export const certifications: Certification[] = [
-  { title: "Microsoft Office Desktop Application", icon: "\u{1F4BB}" },
-  { title: "Content Creator (BNSP)", icon: "\u{1F3AC}" },
-  { title: "Dasar Visualisasi Data (Dicoding)", icon: "\u{1F4CA}" },
-  { title: "Dasar AI (Dicoding)", icon: "\u{1F916}" },
+  { title: "Microsoft Office Desktop Application", icon: "\u{1F4BB}", image: "/assets/certifications/microsoft-office.jpg" },
+  { title: "Content Creator (BNSP)", icon: "\u{1F3AC}", image: "/assets/certifications/content-creator.jpg" },
+  { title: "Dasar Visualisasi Data (Dicoding)", icon: "\u{1F4CA}", image: "/assets/certifications/dasar-visualisasi-data.jpg" },
+  { title: "Dasar AI (Dicoding)", icon: "\u{1F916}", image: "/assets/certifications/dasar-ai.jpg" },
 ];
 
 export const testimonials: Testimonial[] = [
-  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company" },
-  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company" },
-  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company" },
+  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company", image: "/assets/testimonials/person-1.jpg" },
+  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company", image: "/assets/testimonials/person-2.jpg" },
+  { quote: "Testimonials coming soon.", name: "Name Placeholder", title: "Title / Company", image: "/assets/testimonials/person-3.jpg" },
 ];

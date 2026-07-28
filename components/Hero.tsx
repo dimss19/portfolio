@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { profile } from "@/data/portfolio";
 
 export default function Hero() {
@@ -15,8 +16,14 @@ export default function Hero() {
         </div>
 
         <div className="relative z-30 max-w-5xl mx-auto glass-card rounded-[2rem] p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
-          <div className="w-36 h-36 rounded-3xl overflow-hidden flex-shrink-0 bg-surface-container border border-white/20 img-placeholder">
-            <span>Photo</span>
+          <div className="w-36 h-36 rounded-3xl overflow-hidden flex-shrink-0 bg-surface-container border border-white/20">
+            <Image
+              src={profile.photo}
+              alt={profile.name}
+              width={144}
+              height={144}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="flex-grow text-center md:text-left">
             <h2 className="text-4xl font-bold text-white tracking-tight">{profile.name}</h2>
