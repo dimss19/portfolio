@@ -4,8 +4,12 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Hero() {
   return (
-    <main className="pt-16 pb-32 bg-background" id="top">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="pt-16 pb-32 bg-background relative overflow-hidden" id="top">
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-600/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-20 right-1/4 w-80 h-80 bg-blue-600/15 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-rose-600/10 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal>
           <div className="relative rounded-[2rem] overflow-hidden h-[480px] mb-[-120px]">
             <Image
@@ -25,7 +29,7 @@ export default function Hero() {
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
-          <div className="relative z-30 max-w-5xl mx-auto glass-card rounded-[2rem] p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+          <div className="relative z-30 max-w-5xl mx-auto glass-card-glow rounded-[2rem] p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
             <div className="w-36 h-36 rounded-3xl overflow-hidden flex-shrink-0 bg-surface-container border border-white/20">
               <Image
                 src={profile.photo}
@@ -38,10 +42,10 @@ export default function Hero() {
               />
             </div>
             <div className="flex-grow text-center md:text-left">
-              <h2 className="text-4xl font-bold text-white tracking-tight">{profile.name}</h2>
-              <p className="text-white/80 font-medium text-xl mt-1">{profile.title}</p>
-              <p className="text-white/50 mt-3 max-w-xl">{profile.description}</p>
-              <p className="text-white/50 mt-3 flex items-center justify-center md:justify-start text-sm">
+              <h2 className="text-4xl font-bold tracking-tight">{profile.name}</h2>
+              <p className="font-medium text-xl mt-1">{profile.title}</p>
+              <p className="mt-3 max-w-xl" style={{ color: "var(--text-muted)" }}>{profile.description}</p>
+              <p className="mt-3 flex items-center justify-center md:justify-start text-sm" style={{ color: "var(--text-muted)" }}>
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" fillRule="evenodd" />
                 </svg>
@@ -51,8 +55,8 @@ export default function Hero() {
             <div className="flex gap-x-10 text-center">
               {profile.stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] mb-1">{stat.label}</p>
-                  <p className="text-3xl font-bold text-white">{stat.value}</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: "var(--text-muted)" }}>{stat.label}</p>
+                  <p className="text-3xl font-bold">{stat.value}</p>
                 </div>
               ))}
             </div>

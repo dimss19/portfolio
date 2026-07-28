@@ -4,13 +4,15 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Skills() {
   return (
-    <section className="py-24 bg-background border-t border-white/5" id="skills">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+    <section className="py-24 bg-background border-t relative overflow-hidden" style={{ borderColor: "var(--card-border)" }} id="skills">
+      <div className="absolute top-1/2 left-0 w-72 h-72 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-violet-600/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             Skills &amp; Focus Areas
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto mb-20 text-lg">
+          <p className="max-w-2xl mx-auto mb-20 text-lg" style={{ color: "var(--text-muted)" }}>
             Core competencies built through coursework, internship, and personal projects.
           </p>
         </ScrollReveal>
@@ -30,11 +32,11 @@ export default function Skills() {
                 <span className="px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest badge-monochrome">
                   {skill.category}
                 </span>
-                <h3 className="text-2xl font-bold mt-6 mb-3 text-white">{skill.title}</h3>
-                <p className="text-white/50 text-sm mb-8 leading-relaxed">{skill.description}</p>
+                <h3 className="text-2xl font-bold mt-6 mb-3">{skill.title}</h3>
+                <p className="text-sm mb-8 leading-relaxed" style={{ color: "var(--text-muted)" }}>{skill.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {skill.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1.5 border border-white/10 rounded-lg text-[10px] font-medium text-white/70 bg-white/5">
+                    <span key={tag} className="px-3 py-1.5 border rounded-lg text-[10px] font-medium" style={{ borderColor: "var(--card-border)", color: "var(--text-muted)", backgroundColor: "var(--badge-bg)" }}>
                       {tag}
                     </span>
                   ))}

@@ -1,13 +1,19 @@
+"use client";
+
 import { navLinks } from "@/data/portfolio";
+import { useTheme } from "./ThemeProvider";
 
 export default function FloatingNav() {
+  const { theme, toggle } = useTheme();
+
   return (
     <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center">
-      <div className="glass-nav px-6 py-3 rounded-full flex items-center space-x-8 shadow-2xl">
+      <div className="glass-nav px-6 py-3 rounded-full flex items-center space-x-6 shadow-2xl">
         {navLinks.map((link) => (
           <a
             key={link.href}
-            className="text-white opacity-60 transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110"
+            className="transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110"
+            style={{ color: theme === "dark" ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)" }}
             href={link.href}
             title={link.title}
           >
@@ -33,6 +39,26 @@ export default function FloatingNav() {
             )}
           </a>
         ))}
+
+        <div className="w-px h-5" style={{ background: theme === "dark" ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)" }} />
+
+        <button
+          type="button"
+          onClick={toggle}
+          className="transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+          style={{ color: theme === "dark" ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)" }}
+          title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          {theme === "dark" ? (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+            </svg>
+          ) : (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+            </svg>
+          )}
+        </button>
       </div>
     </nav>
   );
