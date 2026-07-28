@@ -75,7 +75,7 @@ export const profile: Profile = {
   stats: [
     { label: "Projects", value: "15" },
     { label: "Certifications", value: "4" },
-    { label: "Internships", value: "1" },
+    { label: "Internships", value: "2" },
     { label: "Focus", value: "3" },
   ],
   social: [
@@ -134,9 +134,30 @@ export const projects: Project[] = [
     likes: 0,
     url: "https://github.com/Kacong05/project-indah-mesin",
   },
+  {
+    title: "Sadam Art",
+    description: "Rebuild website penjualan mebel berbasis Laravel. Memungkinkan pelanggan melihat katalog produk furniture, detail produk, dan melakukan pemesanan secara online. Mendukung konsep sustainability melalui pemanfaatan kembali furnitur yang masih memiliki nilai guna.",
+    image: "/assets/projects/sadam-art.jpg",
+    tags: ["Laravel", "PHP", "MySQL", "Bootstrap"],
+    likes: 0,
+    url: "https://github.com/dimss19/sadam-art",
+  },
 ];
 
 export const experiences: Experience[] = [
+  {
+    role: "IoT Developer Intern",
+    company: "CV. Indah Jaya Teknik (Indah Mesin)",
+    image: "/assets/experience/indah-mesin.jpg",
+    period: "Jul 2026 - Present",
+    location: "Malang",
+    responsibilities: [
+      "Developed SCADA web-based monitoring system for retort sterilization machines using Laravel, Modbus integration, and real-time telemetry.",
+      "Built IoT monitoring systems with ESP32 sensors for temperature, pressure, and machine status tracking.",
+      "Implemented data visualization dashboards with Chart.js for real-time process monitoring.",
+      "Collaborated with mechanical and electrical teams to integrate software with industrial hardware.",
+    ],
+  },
   {
     role: "Internship Technician",
     company: "Serbu Computer",
