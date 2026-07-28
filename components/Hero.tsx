@@ -6,9 +6,9 @@ import HeroAscii from "./HeroAscii";
 export default function Hero() {
   return (
     <main className="pt-16 pb-32 bg-background" id="top">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         <ScrollReveal>
-          <div className="relative rounded-[2rem] overflow-hidden h-[480px] mb-[-120px]">
+          <div className="relative overflow-hidden h-[480px] mb-[-120px]">
             <HeroAscii />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20 pointer-events-none">
               <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-center">
