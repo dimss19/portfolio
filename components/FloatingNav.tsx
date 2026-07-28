@@ -12,8 +12,7 @@ export default function FloatingNav() {
         {navLinks.map((link) => (
           <a
             key={link.href}
-            className="transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110"
-            style={{ color: theme === "dark" ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)" }}
+            className="text-white/60 transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110"
             href={link.href}
             title={link.title}
           >
@@ -40,13 +39,12 @@ export default function FloatingNav() {
           </a>
         ))}
 
-        <div className="w-px h-5" style={{ background: theme === "dark" ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)" }} />
+        <div className="w-px h-5 bg-white/20" />
 
         <button
           type="button"
           onClick={toggle}
-          className="transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110 cursor-pointer"
-          style={{ color: theme === "dark" ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)" }}
+          className="text-white/60 transition-all duration-500 hover:opacity-100 hover:-translate-y-1 hover:scale-110 cursor-pointer"
           title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
         >
           {theme === "dark" ? (
