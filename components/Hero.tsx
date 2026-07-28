@@ -29,6 +29,8 @@ export default function Hero() {
               width={144}
               height={144}
               className="w-full h-full object-cover"
+              priority
+              quality={95}
             />
           </div>
           <div className="flex-grow text-center md:text-left">

@@ -21,7 +21,7 @@ export default function WorkExperience() {
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   className="w-full p-8 flex justify-between items-center cursor-pointer hover:bg-white/5 transition-colors text-left"
                 >
-                  <div className="flex items-center space-x-6">
+                  <div className="flex items-center space-x-6 pointer-events-none">
                     <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white/5 border border-white/10 shrink-0">
                       <Image
                         src={exp.image}
@@ -39,7 +39,7 @@ export default function WorkExperience() {
                     </div>
                   </div>
                   <svg
-                    className={`w-5 h-5 text-white/70 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                    className={`w-5 h-5 text-white/70 shrink-0 transition-transform duration-200 pointer-events-none ${isOpen ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

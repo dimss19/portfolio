@@ -1,10 +1,15 @@
 "use client";
 
 export default function BackToTop() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <button
+      type="button"
       className="fixed bottom-32 right-8 glass-card text-white p-4 rounded-2xl hover:scale-110 transition-all z-40 group"
-      onClick={() => window.scrollTo(0, 0)}
+      onClick={scrollToTop}
       aria-label="Back to top"
     >
       <svg
