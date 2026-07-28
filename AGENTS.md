@@ -18,25 +18,22 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Stack
 
-- **Next.js 16.2** (App Router, `"use client"` throughout)
-- **React 19.2** — not React 18; new hooks: `use()`, `useOptimistic`, `useActionState`, `useEffectEvent`
+- **Next.js 16.2** (App Router)
+- **React 19.2** — not React 18
 - **Tailwind CSS v4** — uses `@tailwindcss/postcss` plugin, NOT v3's `tailwindcss` PostCSS plugin
-- **Framer Motion 12** — import from `"framer-motion"` (NOT `"motion/react"`)
+- **Geist + JetBrains Mono** fonts via `next/font/google`
 - **TypeScript** with `@/*` path alias mapping to project root
 
 ## Architecture
 
-- All page components are in `app/page.tsx` (single-file, ~590 lines)
-- `app/layout.tsx` — root layout with Plus Jakarta Sans font
-- `app/globals.css` — custom CSS utilities (`.img-placeholder`, `.badge-monochrome`, `.hero-placeholder`)
-- Dark theme: black background, white text
-
-## Next.js 16 Breaking Changes
-
-- **Async Request APIs**: `cookies()`, `headers()`, `draftMode()`, `params`, `searchParams` are now async — must `await` them
-- **`next/legacy/image` deprecated**: use `next/image` instead
-- **`revalidateTag`**: now requires a second argument (cacheLife profile), e.g. `revalidateTag('posts', 'max')`
-- Local upgrade guide: `node_modules/next/dist/docs/01-app/02-guides/upgrading/version-16.mdx`
+- `app/page.tsx` — composes all section components
+- `app/layout.tsx` — root layout with Geist + JetBrains Mono fonts
+- `app/globals.css` — `@theme inline` tokens + glassmorphism utilities
+- `components/` — 11 section components (FloatingNav, Hero, Skills, Projects, WorkExperience, Education, Organization, Certifications, Testimonials, ContactCTA, BackToTop)
+- `data/portfolio.ts` — all typed content data
+- Dark theme: `#131313` background, `#e2e2e2` text
+- CSS transitions only — NO Framer Motion
+- `WorkExperience.tsx` and `BackToTop.tsx` use `"use client"`
 
 ## Tailwind CSS v4 Differences
 
@@ -50,21 +47,14 @@ This version has breaking changes — APIs, conventions, and file structure may 
 /* Correct v4 pattern */
 @import "tailwindcss";
 @theme inline {
-  --font-sans: "Plus Jakarta Sans", sans-serif;
-  --color-background: #000000;
+  --font-sans: "Geist", sans-serif;
+  --color-background: #131313;
 }
 ```
-
-## Framer Motion Patterns
-
-- Import from `"framer-motion"` — the `"motion/react"` import is deprecated
-- `useInView(ref, { once: true, margin: "-10%" })` — scroll-triggered animations
-- `useScroll()` / `useTransform(value, inputRange, outputRange)` — scroll-linked effects
-- `motion.div` with `initial`, `animate`, `transition`, `whileHover`, `whileTap`
 
 ## Gotchas
 
 - No test suite exists — do not assume test commands
 - No typecheck script — `npm run lint` is the only static analysis
-- The `.bak` file (`page.tsx.bak`) uses `import from "motion/react"` — do NOT copy this; use `"framer-motion"` instead
 - Tailwind v4 uses `@theme inline` blocks in CSS, not `tailwind.config.js`
+- All SVG attributes must use JSX camelCase (`viewBox`, `strokeLinecap`, `strokeLinejoin`, `strokeWidth`, `fillRule`, `clipRule`)
