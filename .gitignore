@@ -49,3 +49,6 @@ opencode.json
 
 # assets readme
 public/assets/README.md
+
+# screenshots
+*.png
