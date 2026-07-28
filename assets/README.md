@@ -1,11 +1,11 @@
 # Assets
 
-Letakkan semua gambar portofolio di sini. Setelah menambahkan gambar, update path di file komponen yang sesuai.
+Letakkan semua gambar portofolio di folder `public/assets/`. Folder `assets/` di root hanya untuk template/README.
 
 ## Struktur Folder
 
 ```
-assets/
+public/assets/
 ├── profile-photo.jpg       # Foto profil (Hero)
 ├── hero-bg.jpg             # Background hero (opsional)
 ├── skills/
@@ -40,38 +40,8 @@ assets/
 | Certifications | 600 x 375 px | 16:10 | JPG/PNG/WebP |
 | Testimonials avatar | 200 x 200 px | 1:1 | JPG/PNG/WebP |
 
-## Cara Mengganti Gambar
-
-1. Tempatkan file gambar di folder `assets/` (ikuti struktur di atas)
-2. Buka file komponen yang ingin diupdate (contoh: `components/Hero.tsx`)
-3. Ganti placeholder `<div className="img-placeholder">Image</div>` dengan tag `<Image>`:
-
-```tsx
-// Sebelum (placeholder)
-<div className="w-36 h-36 img-placeholder">
-  <span>Photo</span>
-</div>
-
-// Sesudah (dengan gambar)
-import Image from "next/image";
-
-<Image
-  src="/assets/profile-photo.jpg"
-  alt="Foto profil"
-  width={144}
-  height={144}
-  className="rounded-3xl object-cover"
-/>
-```
-
-4. Untuk gambar di folder subdirektori (skills/, projects/, dst), path-nya:
-   - `/assets/skills/web-development.jpg`
-   - `/assets/projects/sadam-art.jpg`
-   - dst.
-
 ## Tips
 
 - Gunakan format **WebP** untuk ukuran file lebih kecil
 - Kompres gambar di [squoosh.app](https://squoosh.app) sebelum upload
 - Pastikan semua gambar memiliki **alt text** yang deskriptif
-- Untuk hero background, gunakan gambar lebar dengan overlay gelap sudah built-in di CSS
