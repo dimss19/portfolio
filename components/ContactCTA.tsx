@@ -22,24 +22,24 @@ const socialIcons: Record<string, ReactElement> = {
 
 export default function ContactCTA() {
   return (
-    <section className="py-40 text-center border-t relative overflow-hidden" style={{ backgroundColor: "var(--bg)", borderColor: "var(--border-on-bg)" }} id="contact">
+    <section className="py-20 sm:py-32 lg:py-40 text-center border-t relative overflow-hidden" style={{ backgroundColor: "var(--bg)", borderColor: "var(--border-on-bg)" }} id="contact">
       <div className="glow-1 absolute top-1/4 left-1/3 w-96 h-96 rounded-full blur-[120px] pointer-events-none" />
       <div className="glow-3 absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[100px] pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <ScrollReveal>
           <p className="text-xl mb-4 font-medium" style={{ color: "var(--heading-sub)" }}>Have a project in mind?</p>
-          <h2 className="text-6xl md:text-8xl font-bold mb-12 tracking-tighter" style={{ color: "var(--heading)" }}>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-8 sm:mb-12 tracking-tighter" style={{ color: "var(--heading)" }}>
             Let&apos;s build something great.
           </h2>
           <a
-            className="bg-white text-black px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl inline-block"
+            className="bg-white text-black px-8 sm:px-12 py-4 sm:py-5 rounded-full font-bold text-lg sm:text-xl hover:scale-105 transition-transform shadow-2xl inline-block"
             href="mailto:adimusricky@gmail.com"
           >
             Get in touch
           </a>
         </ScrollReveal>
         <ScrollReveal delay={200}>
-          <div className="mt-32 pt-20 border-t" style={{ borderColor: "var(--border-on-bg)" }}>
+          <div className="mt-16 sm:mt-24 lg:mt-32 pt-10 sm:pt-16 lg:pt-20 border-t" style={{ borderColor: "var(--border-on-bg)" }}>
             <p className="text-xs mb-10 uppercase tracking-[0.4em]" style={{ color: "var(--heading-sub)" }}>Malang, Indonesia (WIB)</p>
             <div className="flex justify-center gap-6 mb-16">
               {profile.social.map((link) => (
@@ -56,7 +56,7 @@ export default function ContactCTA() {
                 </a>
               ))}
             </div>
-            <div className="flex justify-center text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--heading-sub)" }}>
+            <div className="flex justify-center text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.3em] font-medium" style={{ color: "var(--heading-sub)" }}>
               <p>&copy; 2026 Adimus Ricky Faisal Sahri. All rights reserved</p>
             </div>
           </div>

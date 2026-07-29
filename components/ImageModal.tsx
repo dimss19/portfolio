@@ -121,7 +121,7 @@ export default function ImageModal({ src, alt }: ImageModalProps) {
           <button
             type="button"
             onClick={close}
-            className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-10"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 text-white/60 hover:text-white transition-colors z-10"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />

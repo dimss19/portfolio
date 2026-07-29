@@ -13,7 +13,7 @@ export default function WorkExperience() {
       <div className="glow-6 absolute top-1/2 left-1/4 w-72 h-72 rounded-full blur-[100px] pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold mb-16 text-center" style={{ color: "var(--heading)" }}>Work experience</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-10 sm:mb-16 text-center" style={{ color: "var(--heading)" }}>Work experience</h2>
         </ScrollReveal>
         <div className="space-y-6">
           {experiences.map((exp, i) => {
@@ -24,10 +24,10 @@ export default function WorkExperience() {
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="w-full p-8 flex justify-between items-center cursor-pointer transition-colors text-left"
+                    className="w-full p-5 sm:p-8 flex justify-between items-center cursor-pointer transition-colors text-left"
                     style={{ color: "var(--card-text)" }}
                   >
-                    <div className="flex items-center space-x-6 pointer-events-none">
+                    <div className="flex items-center space-x-3 sm:space-x-6 pointer-events-none min-w-0">
                       <div className="w-16 h-16 rounded-2xl overflow-hidden shrink-0" style={{ backgroundColor: "var(--card-tag-bg)", border: "1px solid var(--card-tag-border)" }}>
                         <Image
                           src={exp.image}
@@ -38,7 +38,7 @@ export default function WorkExperience() {
                         />
                       </div>
                       <div>
-                        <h4 className="font-bold text-xl">{exp.role}</h4>
+                        <h4 className="font-bold text-lg sm:text-xl">{exp.role}</h4>
                         <p className="text-sm" style={{ color: "var(--card-text-muted)" }}>
                           {exp.company} &bull; {exp.period} &bull; {exp.location}
                         </p>

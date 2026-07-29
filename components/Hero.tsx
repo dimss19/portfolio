@@ -11,7 +11,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal>
-          <div className="relative rounded-[2rem] overflow-hidden h-[480px] mb-[-120px]">
+          <div className="relative rounded-[2rem] overflow-hidden h-[280px] sm:h-[360px] lg:h-[480px] mb-[-60px] sm:mb-[-80px] lg:mb-[-120px]">
             <Image
               src="/assets/hero-bg.jpg"
               alt="Hero background"
@@ -29,7 +29,7 @@ export default function Hero() {
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
-          <div className="relative z-30 max-w-5xl mx-auto glass-card-glow rounded-[2rem] p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+          <div className="relative z-30 max-w-5xl mx-auto glass-card-glow rounded-[2rem] p-5 sm:p-8 lg:p-10 flex flex-col md:flex-row items-center md:items-start space-y-6 sm:space-y-8 md:space-y-0 md:space-x-10">
             <div className="w-36 h-36 rounded-3xl overflow-hidden flex-shrink-0" style={{ backgroundColor: "var(--card-tag-bg)", border: "1px solid var(--card-tag-border)" }}>
               <Image
                 src={profile.photo}
@@ -42,7 +42,7 @@ export default function Hero() {
               />
             </div>
             <div className="flex-grow text-center md:text-left">
-              <h2 className="text-4xl font-bold tracking-tight" style={{ color: "var(--card-text)" }}>{profile.name}</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight" style={{ color: "var(--card-text)" }}>{profile.name}</h2>
               <p className="font-medium text-xl mt-1" style={{ color: "var(--card-text-muted)" }}>{profile.title}</p>
               <p className="mt-3 max-w-xl" style={{ color: "var(--card-text-muted)" }}>{profile.description}</p>
               <p className="mt-3 flex items-center justify-center md:justify-start text-sm" style={{ color: "var(--card-text-muted)" }}>
@@ -52,7 +52,7 @@ export default function Hero() {
                 {profile.location}
               </p>
             </div>
-            <div className="flex gap-x-10 text-center">
+            <div className="flex gap-x-4 sm:gap-x-6 lg:gap-x-10 text-center flex-wrap">
               {profile.stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: "var(--card-text-dim)" }}>{stat.label}</p>

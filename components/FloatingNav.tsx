@@ -7,8 +7,8 @@ export default function FloatingNav() {
   const { theme, toggle } = useTheme();
 
   return (
-    <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center">
-      <div className="glass-nav px-6 py-3 rounded-full flex items-center space-x-6 shadow-2xl">
+    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center sm:bottom-8">
+      <div className="glass-nav px-3 py-2.5 rounded-full flex items-center space-x-3 shadow-2xl sm:px-6 sm:py-3 sm:space-x-6">
         {navLinks.map((link) => (
           <a
             key={link.href}

@@ -19,8 +19,8 @@ export default function Skills() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skills.map((skill, i) => (
             <ScrollReveal key={skill.category} delay={(i + 1) * 150}>
-              <div className="p-8 glass-card rounded-[2rem] text-left h-full">
-                <div className="mb-8 h-56 rounded-2xl overflow-hidden">
+              <div className="p-5 sm:p-8 glass-card rounded-[2rem] text-left h-full">
+                <div className="mb-6 sm:mb-8 h-44 sm:h-56 rounded-2xl overflow-hidden">
                   <Image
                     src={skill.image}
                     alt={skill.title}

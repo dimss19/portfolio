@@ -9,7 +9,7 @@ export default function BackToTop() {
   return (
     <button
       type="button"
-      className="fixed bottom-8 right-8 glass-card p-4 rounded-2xl hover:scale-110 transition-all z-40 group"
+      className="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 glass-card p-3 sm:p-4 rounded-2xl hover:scale-110 transition-all z-40 group"
       style={{ color: "var(--nav-icon)" }}
       onClick={scrollToTop}
       aria-label="Back to top"

@@ -11,7 +11,7 @@ export default function Projects() {
         <ScrollReveal>
           <div className="flex items-end justify-between mb-16">
             <div className="flex items-center space-x-4">
-              <h2 className="text-4xl font-bold leading-tight" style={{ color: "var(--heading)" }}>
+              <h2 className="text-3xl sm:text-4xl font-bold leading-tight" style={{ color: "var(--heading)" }}>
                 Showcase of<br />my best works
               </h2>
             </div>
@@ -30,7 +30,7 @@ export default function Projects() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-8 flex-grow">
+                <div className="p-5 sm:p-8 flex-grow">
                   <h3 className="font-bold text-xl mb-3" style={{ color: "var(--card-text)" }}>{project.title}</h3>
                   <p className="text-sm mb-6 leading-relaxed" style={{ color: "var(--card-text-muted)" }}>{project.description}</p>
                   <div className="flex flex-wrap gap-2">
@@ -41,7 +41,7 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
-                <div className="p-6 border-t flex justify-between items-center text-xs" style={{ borderColor: "var(--card-tag-border)", color: "var(--card-text-dim)" }}>
+                <div className="p-4 sm:p-6 border-t flex justify-between items-center text-xs" style={{ borderColor: "var(--card-tag-border)", color: "var(--card-text-dim)" }}>
                   <div className="flex items-center space-x-2">
                     <span>&#9825; {project.likes}</span>
                   </div>
