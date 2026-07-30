@@ -18,8 +18,10 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Adimus Ricky Faisal Sahri | Web Developer & IoT Enthusiast",
   description:
-    "Portfolio of Adimus Ricky - Web Developer & IoT Enthusiast from Malang, Indonesia. Specializing in Laravel, React, ESP32, and industrial monitoring systems.",
+    "Adimus Ricky Faisal Sahri - Web Developer & IoT Enthusiast from Malang, Indonesia. Portfolio showcasing Laravel, React, ESP32, and industrial SCADA projects.",
   keywords: [
+    "adimus ricky",
+    "adimus ricky faisal sahri",
     "web developer",
     "IoT",
     "Laravel",
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Adimus Ricky Faisal Sahri | Web Developer & IoT Enthusiast",
     description:
-      "Portfolio of Adimus Ricky - Web Developer & IoT Enthusiast from Malang, Indonesia.",
+      "Adimus Ricky Faisal Sahri - Web Developer & IoT Enthusiast from Malang, Indonesia.",
     url: "https://adimusricky.vercel.app",
     siteName: "Adimus Ricky Portfolio",
     images: [
@@ -56,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Adimus Ricky Faisal Sahri | Web Developer & IoT Enthusiast",
     description:
-      "Portfolio of Adimus Ricky - Web Developer & IoT Enthusiast from Malang, Indonesia.",
+      "Adimus Ricky Faisal Sahri - Web Developer & IoT Enthusiast from Malang, Indonesia.",
     images: ["/assets/profile-photo.jpg"],
   },
   robots: {

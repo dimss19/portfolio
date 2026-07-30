@@ -69,7 +69,7 @@ export const navLinks: NavLink[] = [
 export const profile: Profile = {
   name: "Adimus Ricky Faisal Sahri",
   title: "Web Developer & IoT Enthusiast",
-  description: "",
+  description: "Web Developer & IoT Enthusiast from Malang, Indonesia. Specializing in Laravel, React, ESP32, and industrial SCADA monitoring systems.",
   location: "Malang, Jawa Timur, Indonesia",
   photo: "/assets/profile-photo.jpg",
   stats: [
