@@ -52,11 +52,11 @@ export default function Hero() {
                 {profile.location}
               </p>
             </div>
-            <div className="flex gap-x-4 sm:gap-x-6 lg:gap-x-10 text-center flex-wrap">
+            <div className="flex gap-x-3 sm:gap-x-6 lg:gap-x-10 text-center">
               {profile.stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: "var(--card-text-dim)" }}>{stat.label}</p>
-                  <p className="text-3xl font-bold" style={{ color: "var(--card-text)" }}>{stat.value}</p>
+                  <p className="text-2xl sm:text-3xl font-bold" style={{ color: "var(--card-text)" }}>{stat.value}</p>
                 </div>
               ))}
             </div>
