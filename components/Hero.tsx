@@ -44,7 +44,6 @@ export default function Hero() {
             <div className="flex-grow text-center md:text-left">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight" style={{ color: "var(--card-text)" }}>{profile.name}</h2>
               <p className="font-medium text-xl mt-1" style={{ color: "var(--card-text-muted)" }}>{profile.title}</p>
-              <p className="mt-3 max-w-xl" style={{ color: "var(--card-text-muted)" }}>{profile.description}</p>
               <p className="mt-3 flex items-center justify-center md:justify-start text-sm" style={{ color: "var(--card-text-muted)" }}>
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" fillRule="evenodd" />
