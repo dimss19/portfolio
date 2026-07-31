@@ -88,7 +88,7 @@ export const profile: Profile = {
 export const skills: Skill[] = [
   {
     category: "Web Development",
-    title: "Junior Web Developer",
+    title: "Web Developer",
     description: "Building web applications with modern stacks, from database design to responsive UI.",
     image: "/assets/skills/web-development.jpg",
     tags: ["Laravel", "React", "PHP", "MySQL"],
