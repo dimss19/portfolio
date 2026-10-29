@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "@/data/portfolio";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://adimusricky.vercel.app/sitemap.xml",
+    sitemap: `${siteConfig.url}/sitemap.xml`,
   };
 }

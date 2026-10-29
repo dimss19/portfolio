@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { siteConfig } from "@/data/portfolio";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     "SCADA",
     "Modbus",
   ],
-  metadataBase: new URL("https://adimusricky.vercel.app"),
+  metadataBase: new URL(siteConfig.url),
   alternates: {
     canonical: "/",
   },
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     title: "Adimus Ricky Faisal Sahri | Web Developer & IoT Enthusiast",
     description:
       "Adimus Ricky Faisal Sahri - Web Developer & IoT Enthusiast from Malang, Indonesia.",
-    url: "https://adimusricky.vercel.app",
+    url: siteConfig.url,
     siteName: "Adimus Ricky Portfolio",
     images: [
       {

@@ -8,6 +8,7 @@ import Organization from "@/components/Organization";
 import Certifications from "@/components/Certifications";
 import ContactCTA from "@/components/ContactCTA";
 import BackToTop from "@/components/BackToTop";
+import { siteConfig } from "@/data/portfolio";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
             "@type": "Person",
             name: "Adimus Ricky Faisal Sahri",
             jobTitle: "Web Developer & IoT Enthusiast",
-            url: "https://adimusricky.vercel.app",
-            image: "https://adimusricky.vercel.app/assets/profile-photo.jpg",
+            url: siteConfig.url,
+            image: `${siteConfig.url}/assets/profile-photo.jpg`,
             sameAs: [
               "https://www.linkedin.com/in/adimusricky",
               "https://github.com/dimss19",

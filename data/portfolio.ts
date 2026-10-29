@@ -8,6 +8,10 @@ export interface Profile {
   social: { platform: string; url: string }[];
 }
 
+export const siteConfig = {
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://adimusricky.my.id",
+};
+
 export interface Skill {
   category: string;
   title: string;
