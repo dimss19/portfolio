@@ -9,7 +9,7 @@ export interface Profile {
 }
 
 export const siteConfig = {
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://adimusricky.my.id",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.adimusricky.my.id",
 };
 
 export interface Skill {
